@@ -1,4 +1,6 @@
 import React from 'react';
+import SigninModal from './signin/Signin.modal';
+import SignUpModal from './signup/signup.modal';
 
 function NavBar() {
     return (
@@ -24,8 +26,8 @@ function NavBar() {
             </div>
             <div className="login-options mr-lg-5 mr-md-4 mr-sm-3 navbar-right">
                 
-                <a className="login-options-child" href="/signin">signin</a>
-                <a className="login-options-child" href="/signup">signup</a>
+                <SigninModal />
+                <SignUpModal />
                 {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#hello" aria-controls="navbarText"    
                     aria-expanded="false"   aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
