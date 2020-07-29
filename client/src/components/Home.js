@@ -1,12 +1,10 @@
-import React from 'react'
-import NavBar from './NavBar'
-import ScrollImages from './ScrollImages'
+import React from 'react';
+import MainPageContainer from './MainPageContainer';
 
 function Home() {
     return (
         <>
-        <NavBar />
-        <ScrollImages />
+            <MainPageContainer />
         </>
     )
 }
