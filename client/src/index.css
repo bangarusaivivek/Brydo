@@ -72,7 +72,30 @@ a {
 
 a:hover 
 {
-   color:white; 
-   text-decoration:none; 
-   cursor:pointer;  
+  /* height: 30px; */
+  
+  
+  text-decoration:none; 
+  cursor:pointer;  
+}
+.main-navbar{
+  height: 64px;
+
+}
+
+.main-page-container{
+  margin-top: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+
+}
+
+.carousel-inner{
+  max-height: 600px;
+}
+.carousel-item{
+  height: 100%;
+}
+img{
+  object-fit: cover;
 }
