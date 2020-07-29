@@ -29,12 +29,12 @@ function NavBar() {
                     aria-expanded="false"   aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button> */}
-                <div class="navbar-toggler">
+                <div class="navbar-toggler" >
                     <a class="navbar-toggle-icon" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span className="navbar-toggler-icon"></span>
                     </a>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style={{height: window.innerHeight - 64}}>
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
                                 <a className="nav-link" href="/ride">Ride <span className="sr-only">(current)</span></a>
