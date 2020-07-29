@@ -2,12 +2,11 @@ import React from 'react';
 
 function NavBar() {
     return (
-        <nav className="navbar navbar-expand-md navbar-dark">
+        <nav className="navbar sticky-top navbar-expand-md navbar-dark">
             <a className="navbar-brand ml-lg-5 ml-md-4 ml-sm-3" href="/home">
                 <h4 className="brand-name">Brydo </h4>
                 <p className = 'tagline'>A bangarus product</p>
             </a>
-            
             <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
