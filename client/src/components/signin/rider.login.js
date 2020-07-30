@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import { Switch, Route, Link } from 'react-router-dom';
+import Hello from './hello';
 
 function RiderLogin() {
     const height = window.offsetHeight;
@@ -6,17 +8,18 @@ function RiderLogin() {
     const [number,setNumber] = useState("");
     function handleClick(e){
         e.preventDefault()
-        console.log(typeof number)
+        console.log(number)
         setNumber("")
         return
     }
 
     return (
+        
         <div className="rider-login-page"  >
             <div className="rider-login-form-container">
                 <div className="rider-login-form-header">
-                    <div>Homepage</div>
-                    <div>Login as Driver</div>
+                    <div><Link to="/"/>Homepage</div>
+                    <div><Link to="/driverlogin"/>Login as Driver</div>
                 </div>
                 <div className= "rider-login-form-body">
                     <div className="rider-login-form-bodyContainer">
@@ -39,6 +42,7 @@ function RiderLogin() {
             </div>
             <div className="rider-login-container"></div>
         </div>
+       
     )
 }
 
