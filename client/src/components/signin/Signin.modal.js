@@ -1,4 +1,5 @@
 import React,{ useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function SigninModal() {
     const [isLogin, setLogin] = useState(false);
@@ -12,8 +13,9 @@ function SigninModal() {
                         <span >cancel</span>
                     </div>
                     <div className="dropdown-modal-container">
-                        <a href="" className="login-container">Rider Login</a>
-                        <a href="" className="login-container">Driver Login</a>
+                        <div className="login-container"><Link to="/riderlogin">Rider Login</Link></div>
+                        <div className="login-container"><Link to="/driverlogin"> Driver Login</Link></div>
+                        
                     </div>
                 </div>   
             </div>
