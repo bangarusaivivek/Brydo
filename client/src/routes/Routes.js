@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import Ride from '../components/Ride';
 import NotFound from '../components/NotFound';
 import RiderLogin from '../components/signin/rider.login';
+import DriverLogin from '../components/signin/driver.login';
 
 function Routes() {
     return (
@@ -12,6 +13,7 @@ function Routes() {
             <Route path="/" exact component={Home} />
             <Route path="/ride" exact component={Ride} />
             <Route path = "/riderlogin" exact component={RiderLogin} />
+            <Route path = "/driverlogin" exact component={DriverLogin} />
             <Route path="*" exact component = {NotFound} />
         </Switch>
     )
