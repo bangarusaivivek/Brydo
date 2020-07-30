@@ -18,8 +18,8 @@ function RiderLogin() {
         <div className="rider-login-page"  >
             <div className="rider-login-form-container">
                 <div className="rider-login-form-header">
-                    <div><Link to="/"/>Homepage</div>
-                    <div><Link to="/driverlogin"/>Login as Driver</div>
+                    <Link to="/">Homepage</Link>
+                    <Link to="/driverlogin">Login as Driver</Link>
                 </div>
                 <div className= "rider-login-form-body">
                     <div className="rider-login-form-bodyContainer">
