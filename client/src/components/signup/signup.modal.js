@@ -5,25 +5,18 @@ function SignUpModal() {
     const show = isLogin ? "dropdown-menu show" : "dropdown-menu"
     return (
         <div className="login-options-child" onClick={() => setLogin(prevState => !prevState)} >
-            {/* <div className="navbar-toggler" > */}
-                    {/* <a className="navbar-toggle-icon" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> */}
-                    signup
-                    {/* </a> */}
-
-                    <div className={show} aria-labelledby="dropdownMenuLink" style={{height: window.innerHeight - 64}}>
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="/ride">Ride <span className="sr-only">(current)</span></a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/drive">Drive</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/partner">Partner</a>
-                            </li>
-                        </ul>
+            signup
+            <div className={`dropdown-menu pl-lg-5 pl-md-4 pl-sm-3 pr-lg-5 pr-md-4 pr-sm-3 ${show} `}  style={{height: window.innerHeight - 64}}>
+                <div className="dropdown-modal">
+                    <div className="dropdown-modal-button">
+                        <span >cancel</span>
                     </div>
-            {/* </div> */}
+                    <div className="dropdown-modal-container">
+                        <a href="" className="login-container">Rider Signup</a>
+                        <a href="" className="login-container">Driver Signup</a>
+                    </div>
+                </div>   
+            </div>
         </div>
     )
 }
