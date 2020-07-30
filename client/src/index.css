@@ -24,11 +24,17 @@ code {
   height: 100%;
   padding: 0%;
   margin-right: 0px;
+  /* background-color: orange; */
 }
+
 .navbar{
   height: 64px;
   background-color: black;
+  /* position: sticky; */
 }
+/* .navbar-collapse{
+  background-color: white;
+} */
 .tagline{
   font-size: 10px;
   margin: 0;
@@ -48,6 +54,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* background-color: green; */
 }
 
 .login-options-child{
@@ -60,13 +67,67 @@ code {
 
 .dropdown-menu.show{
   width: 100vw;
-  height: 90vh;
-  background-color: gray;
-  overflow: hidden;
+  background-color:white;
+  
 }
 
+.dropdown-modal{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.menu-modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  border: 1px solid red
+  
+}
+
+.dropdown-modal-button{
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  border: 1px solid black;
+}
+.dropdown-modal-container{
+  position: relative;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.login-container{
+  margin: 10px;
+  height: 100px;
+  width: 50%;
+  border: 1px solid black;
+  background-color: azure;
+}
+.menu-container{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  
+  border: 1px solid black;
+  background-color: azure;
+  font-size: 2rem;
+}
 a {
-  color: #0060B6;
+
+  color: black;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
@@ -80,22 +141,122 @@ a:hover
 }
 .main-navbar{
   height: 64px;
-
+  position: sticky;
 }
 
 .main-page-container{
   margin-top: 10px;
-  padding: 10px;
+  /* padding: 10px; */
   overflow-y: scroll;
 
 }
 
+.image-carousel{
+  margin: 10px;
+}
 .carousel-inner{
   max-height: 600px;
 }
-.carousel-item{
-  height: 100%;
+
+.mainpage-row{
+  min-height: 500px;
+  margin: 10px;
+  background-color: aqua;
+  color: black;
 }
-img{
-  object-fit: cover;
+.rider-login-page{
+  display: flex;
+  height: 90vh;
+}
+.rider-login-form-container{
+  max-width: 40%;
+  min-width: 450px;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  
+}
+.rider-login-form-header{
+  max-height: 100px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.rider-login-form-body{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.rider-login-form-bodyContainer{
+  height: 80%;
+  width: 400px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.rider-form-logo{
+  height: 40%;
+  width: 100%;
+  background-color: beige;
+}
+.rider-form-data{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rider-login-form{
+  height: 50%;
+  width: 80%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.rider-login-container{
+  max-width: 60%;
+
+  background-color: gray;
+}
+.rider-login-number{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 70%;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: rgb(228, 237, 245);
+}
+/* Media Queries */
+@media (min-width: 768px){
+  .dropdown-modal-container {
+      flex-direction:row;
+  }
+}
+@media (max-width: 768px){
+  .rider-login-form-container{
+    min-width: 100%;
+  }
+  .rider-login-form{
+    width: 400px;
+  }
+  .rider-login-container{
+    display: hidden;
+  }
+}
+
+@media (max-width: 450px){
+  .rider-login-form-bodyContainer{
+    width: 350px;
+  }
 }
