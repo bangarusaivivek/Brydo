@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import SigninModal from './signin/Signin.modal';
 import SignUpModal from './signup/signup.modal';
 import MenuModal from './menu.modal';
 
 function NavBar() {
+    
     return (
         <div className="main-navbar sticky-top">
         <nav className="navbar navbar-expand-md navbar-dark">
