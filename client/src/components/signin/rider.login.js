@@ -1,17 +1,23 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import Hello from './hello';
+import { useForm } from 'react-hook-form';
+import { RiderLoginFormValidator } from '../../validators/login.form.validator';
 
-function RiderLogin() {
-    const height = window.offsetHeight;
-    // console.log(height)
-    const [number,setNumber] = useState("");
-    function handleClick(e){
-        e.preventDefault()
-        console.log(number)
-        setNumber("")
-        return
-    }
+function RiderLogin({history}) {
+    
+    // const [number,setNumber] = useState("");
+    // function handleClick(e){
+    //     e.preventDefault()
+    //     console.log(number)
+    //     setNumber("")
+    //     return
+    // }
+
+    // For email
+    // value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+    // message: "invalid email address"
+
+    
 
     return (
         
@@ -25,18 +31,7 @@ function RiderLogin() {
                     <div className="rider-login-form-bodyContainer">
 
                         <div className="rider-form-logo">logo</div>
-                        <form className="rider-form-data" onSubmit={handleClick}>
-                        
-                            <div style={{height: 100}}>Enter your phone number</div>
-                            <div className="rider-login-number">
-                            
-                                <div className="country-code">+91</div>
-                                <input className="rider-phonenumber" type="tel" placeholder="Phone number" value= {number}  onChange={e => setNumber(e.target.value)} />
-                                    
-                            </div>
-                            <button style={{width:100}}>Next</button>
-                        
-                        </form>
+                        <RiderLoginFormValidator history={history}/>
                     </div>
                 </div>
             </div>
