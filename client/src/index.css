@@ -277,20 +277,71 @@ a:hover
   
 }
 .rider-signup-container{
+  min-height: 1200px;
   height: calc(100vh - 60px);
-  background-color: bisque;
   position: relative;
 }
-.rider-signup-form-container{
-  height: 70%;
-
-  min-width: 400px;
+.signup-data-container{
+  height: 1000px;
+  min-width: 450px;
   position: absolute;
  background-color: aqua;
  right: 10px;
  top: 20px;
 }
-
+.signup-header{
+  min-height: 250px;
+  border: 1px solid red;
+}
+.signup-form-container{
+  min-height: 550px;
+  padding: 0 10px ;
+  display: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+}
+.signup-form-block{
+  min-height: 100px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signup-form-label{
+  display: flex;
+  align-items: center;
+  height: 25px;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.signup-form-input{
+  min-height: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  align-items: center;
+}
+.signup-form-error{
+  display: flex;
+  align-items: center;
+  height: 25px;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color:red;
+}
+.signup-form-button{
+  min-height: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 /* Media Queries */
 @media (min-width: 768px){
   .dropdown-modal-container {
@@ -313,12 +364,41 @@ a:hover
     justify-content: center;
     align-items: center;
   }
-  .rider-signup-form-container{
-    position: relative;
+  .signup-data-container{
+    position: static;
   }
   
 }
-
+@media (max-width: 600px){
+  .signup-data-container{
+    min-width: 420px;
+    max-width: 420px;
+  }
+}
+@media (max-width: 500px){
+  .signup-data-container{
+    min-width: 375px;
+    max-width: 375px;
+  }
+}
+@media (max-width: 450px){
+  .signup-data-container{
+    min-width: 350px;
+    max-width: 350px;
+  }
+}
+@media (max-width: 425px){
+  .signup-data-container{
+    min-width: 325px;
+    max-width: 325px;
+  }
+}
+@media (max-width: 400px){
+  .signup-data-container{
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
 @media (max-width: 450px){
   .rider-login-form-bodyContainer{
     width: 350px;

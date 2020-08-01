@@ -6,7 +6,11 @@ import Ride from '../components/Ride';
 import NotFound from '../components/NotFound';
 import RiderLogin from '../components/signin/rider.login';
 import DriverLogin from '../components/signin/driver.login';
-import SignInAuthPage from '../components/signin/signin.auth';
+import SignInRiderAuthPage from '../components/signin/signin.rider.auth';
+import SignInDriverAuthPage from '../components/signin/signin.driver.auth';
+import { Example } from '../components/signin/hello';
+import RiderSignup from '../components/signup/signup.rider';
+import DriverSignup from '../components/signup/signup.driver';
 
 function Routes() {
     return (
@@ -14,8 +18,12 @@ function Routes() {
             <Route path="/" exact component={Home} />
             <Route path="/ride" exact component={Ride} />
             <Route path = "/riderlogin" exact component={RiderLogin} />
+            <Route path = "/ridersignup" exact component={RiderSignup} />
+            <Route path = "/driversignup" exact component={DriverSignup} />
             <Route path = "/driverlogin" exact component={DriverLogin} />
-            <Route path = "/signinAuth" exact component={SignInAuthPage} />
+            <Route path = "/signinRiderAuth" exact component={SignInRiderAuthPage} />
+            <Route path = "/signinDriverAuth" exact component={SignInDriverAuthPage} />
+            <Route path = "/hello" exact component={Example} />
             <Route path="*" exact component = {NotFound} />
         </Switch>
     )

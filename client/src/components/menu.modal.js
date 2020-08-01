@@ -8,7 +8,7 @@ function MenuModal() {
         <div className="navbar-toggler" onClick={() => setLogin(prevState => !prevState)} >
             <span className="navbar-toggler-icon"></span>
             {/* {symbol} */}
-            <div className={`dropdown-menu pl-lg-5 pl-md-4 pl-sm-3 pr-lg-5 pr-md-4 pr-sm-3 ${show} `}  style={{height: window.innerHeight - 64}}>
+            <div className={`dropdown-menu pl-lg-5 pl-md-4 pl-sm-3 pr-lg-5 pr-md-4 pr-sm-3 ${show} `}  style={{height: "calc(100vh - 64px)"}}>
                 <div className="menu-modal">
                     
                         <a href="" className="menu-container">Ride</a>
