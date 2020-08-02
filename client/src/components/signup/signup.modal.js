@@ -12,8 +12,8 @@ function SignUpModal() {
                         <span >cancel</span>
                     </div>
                     <div className="dropdown-modal-container">
-                        <a href="" className="login-container">Rider Signup</a>
-                        <a href="" className="login-container">Driver Signup</a>
+                        <a href="/ridersignup" className="login-container">Rider Signup</a>
+                        <a href="driversignup" className="login-container">Driver Signup</a>
                     </div>
                 </div>   
             </div>

@@ -2,11 +2,11 @@ import React,{useState} from 'react'
 
 function MenuModal() {
     const [isLogin, setLogin] = useState(false);
-    const show = isLogin ? "dropdown-menu show" : "dropdown-menu"
+    const show = isLogin ? "show" : ""
     const symbol = isLogin ? "X" : "=";
     return (
-        <div className="navbar-toggler" onClick={() => setLogin(prevState => !prevState)} >
-            <span className="navbar-toggler-icon"></span>
+        <div className="navbar-toggler-icon" onClick={() => setLogin(prevState => !prevState)} style={{minHeight:30,minWidth:30}}>
+            {/* <span className="navbar-toggler-icon"></span> */}
             {/* {symbol} */}
             <div className={`dropdown-menu pl-lg-5 pl-md-4 pl-sm-3 pr-lg-5 pr-md-4 pr-sm-3 ${show} `}  style={{height: "calc(100vh - 64px)"}}>
                 <div className="menu-modal">
