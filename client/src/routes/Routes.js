@@ -11,6 +11,7 @@ import SignInDriverAuthPage from '../components/signin/signin.driver.auth';
 import { Example } from '../components/signin/hello';
 import RiderSignup from '../components/signup/signup.rider';
 import DriverSignup from '../components/signup/signup.driver';
+import RiderDashboard from '../components/dashboard/rider.dashboard';
 
 function Routes() {
     return (
@@ -23,6 +24,7 @@ function Routes() {
             <Route path = "/driverlogin" exact component={DriverLogin} />
             <Route path = "/signinRiderAuth" exact component={SignInRiderAuthPage} />
             <Route path = "/signinDriverAuth" exact component={SignInDriverAuthPage} />
+            <Route path = "/riderdashboard" exact component={RiderDashboard} />
             <Route path = "/hello" exact component={Example} />
             <Route path="*" exact component = {NotFound} />
         </Switch>
