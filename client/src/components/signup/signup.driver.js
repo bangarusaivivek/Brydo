@@ -2,6 +2,7 @@ import React from 'react'
 import { DriverSignupFormValidator } from '../../validators/signup.form.validator'
 
 function DriverSignup({history}) {
+
     return (
         <div>
         <div className = "sticky-top"  style={{minHeight:60,backgroundColor:"orange"}}></div>
@@ -21,3 +22,4 @@ function DriverSignup({history}) {
 }
 
 export default DriverSignup
+

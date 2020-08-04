@@ -12,6 +12,11 @@ import { Example } from '../components/signin/hello';
 import RiderSignup from '../components/signup/signup.rider';
 import DriverSignup from '../components/signup/signup.driver';
 import RiderDashboard from '../components/dashboard/rider.dashboard';
+import RiderDashboardBookings from '../components/dashboard/riderdashboard.mybookings';
+import RiderDashboardWallet from '../components/dashboard/riderdashboard.mywallet';
+import RiderDashboardProfile from '../components/dashboard/riderdashboard.profile';
+import RiderDashboardSupport from '../components/dashboard/riderdashboard.support';
+import RiderDashboardRental from '../components/dashboard/rider.dashboard.rental';
 
 function Routes() {
     return (
@@ -25,6 +30,11 @@ function Routes() {
             <Route path = "/signinRiderAuth" exact component={SignInRiderAuthPage} />
             <Route path = "/signinDriverAuth" exact component={SignInDriverAuthPage} />
             <Route path = "/riderdashboard" exact component={RiderDashboard} />
+            <Route path = "/riderdashboard/mybookings" exact component={RiderDashboardBookings} />
+            <Route path = "/riderdashboard/mywallet" exact component={RiderDashboardWallet} />
+            <Route path = "/riderdashboard/profile" exact component={RiderDashboardProfile} />
+            <Route path = "/riderdashboard/support" exact component={RiderDashboardSupport} />
+            <Route path = "/riderdashboard/rentals" exact component={RiderDashboardRental} />
             <Route path = "/hello" exact component={Example} />
             <Route path="*" exact component = {NotFound} />
         </Switch>
