@@ -2,12 +2,14 @@ import React,{ useState } from 'react'
 import RiderNavbar from './rider.navbar'
 
 function RiderDashboardProfile() {
+
     const [fname,setFname] = useState("");
     const [lname,setLname] = useState("");
     const [newpassword,setPassword] = useState("");
     const [confirmpwd,setConfirmpwd] = useState("");
     const [color,setColor] = useState("white");
     const [error,setError] = useState("");
+
     const confirmpwdHandler = (e) => {
         const value = e.target.value;
         if(value === ""){
@@ -21,6 +23,7 @@ function RiderDashboardProfile() {
         }
         setConfirmpwd(e.target.value);
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if(confirmpwd !== newpassword){
@@ -30,6 +33,7 @@ function RiderDashboardProfile() {
             setError("");
         }
     }
+    
     return (
         <>
         <RiderNavbar />
@@ -307,7 +311,6 @@ function RiderDashboardProfile() {
                     </div>
                 </form>
                 <div style={{minHeight:100}}>
-
                 </div>
             </div>
             
