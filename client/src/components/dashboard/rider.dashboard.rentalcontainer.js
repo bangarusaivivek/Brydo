@@ -4,7 +4,7 @@ function RentalContainer() {
 
     const rentalStyles ={
         
-        backgroundColor: "white",
+        backgroundColor: "#E67E22",
         border: "1px solid black",
         margin: "10px",
         padding: "5px",
@@ -18,7 +18,7 @@ function RentalContainer() {
     }
     const dataContainer ={
         minHeight: "30%",
-        backgroundColor: "red",
+        backgroundColor: "#D7DBDD",
         border: "1px solid black",
     }
 
