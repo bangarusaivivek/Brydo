@@ -2,6 +2,7 @@ import React from 'react'
 import RiderNavbar from './rider.navbar';
 import RiderBottomNavbar from './rider.bottomnavbar'
 import RentalContainer from './rider.dashboard.rentalcontainer';
+import RiderRentalSearch from './rider.dashboard.rental.search';
 
 function RiderDashboardRental() {
 
@@ -9,7 +10,8 @@ function RiderDashboardRental() {
     const searchStyles = {
         height: "40px",
         backgroundColor: "green",
-        
+      
+
     }
     const filterStyles = {
         height: "40px",
@@ -21,8 +23,11 @@ function RiderDashboardRental() {
         <>
         <RiderNavbar />
         <div className="rider-search-filter">
-            <div className="" style={searchStyles}>Search</div>
-            <div className="" style={filterStyles}>filter</div>
+            <div className="rider-search" style={searchStyles}>
+                <RiderRentalSearch />
+
+            </div>
+            <div className="rider-filter" style={filterStyles}>filter</div>
         </div>
         
         

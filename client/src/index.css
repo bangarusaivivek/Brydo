@@ -507,6 +507,17 @@ a:hover
 
 }
 
+/* colors */
+.red{
+  background-color: red;
+
+}
+.green{
+  background-color: green;
+}
+.white{
+  background-color: white;
+}
 /* Media Queries */
 @media (min-width: 768px){
   .dropdown-modal-container {
