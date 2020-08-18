@@ -424,9 +424,12 @@ a:hover
 .rider-search-filter{
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   height: 40px;
 }
 .rider-search-filter > div{
+  display: flex;
+  flex-direction: row;
   width: 50%;
 }
 .rider-rental-container{
@@ -434,7 +437,7 @@ a:hover
   height: calc(100vh - 200px);
   display: flex; 
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   overflow-y: scroll;
   background-color: gray;
 }
@@ -446,6 +449,62 @@ a:hover
   max-width: 350px;
   height: 250px;
   width: 350px;
+}
+
+/* Rider Profile */
+.rider-profile-container{
+  min-height: calc(100vh - 64px);
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+
+  overflow-y: scroll;
+}
+.rider-profile-data-container{
+  min-height: calc(100vh - 64px);
+  height: 100%;
+  min-width: 350px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+}
+.rider-profile-pic-container{
+  min-height: 200px;
+  max-height: 200px;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+
+}
+.rider-profile-data-block{
+
+  min-height: 75px;
+  max-height: 75px;
+  height: 100px;
+  width: 100%;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+}
+.rider-profile-cpwd-block{
+
+  width: 100%;
+  max-height: 40px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rider-profile-form-block{
+  width: 100%;
+
 }
 
 /* Media Queries */
