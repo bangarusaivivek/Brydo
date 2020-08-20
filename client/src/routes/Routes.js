@@ -17,6 +17,7 @@ import RiderDashboardWallet from '../components/dashboard/riderdashboard.mywalle
 import RiderDashboardProfile from '../components/dashboard/riderdashboard.profile';
 import RiderDashboardSupport from '../components/dashboard/riderdashboard.support';
 import RiderDashboardRental from '../components/dashboard/rider.dashboard.rental';
+import RentalBooking from '../components/dashboard/rider.dashboard.rentalcontainer.booking';
 
 function Routes() {
     return (
@@ -35,6 +36,7 @@ function Routes() {
             <Route path = "/riderdashboard/profile" exact component={RiderDashboardProfile} />
             <Route path = "/riderdashboard/support" exact component={RiderDashboardSupport} />
             <Route path = "/riderdashboard/rentals" exact component={RiderDashboardRental} />
+            <Route path = "/riderdashboard/rentals/booking" exact component={RentalBooking} />
             <Route path = "/hello" exact component={Example} />
             <Route path="*" exact component = {NotFound} />
         </Switch>
