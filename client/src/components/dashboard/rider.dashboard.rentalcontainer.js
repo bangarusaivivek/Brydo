@@ -1,8 +1,8 @@
 import React,{ useState } from 'react';
-// import readerIcon from '003-medium.png';
+import {useHistory} from 'react-router-dom';
 
 function RentalContainer() {
-
+    const history = useHistory();
     const [select,setSelect] = useState();
     const rentalStyles ={
         
@@ -32,11 +32,13 @@ function RentalContainer() {
     const handleClick = (e) =>{
         e.preventDefault();
         e.stopPropagation();
-        if(select)
-            document.getElementById(select).classList.remove("hello");
+        // if(select)
+        //     document.getElementById(select).classList.remove("hello");
 
-        document.getElementById(e.target.id).classList.add("hello");
-        setSelect(e.target.id);
+        // document.getElementById(e.target.id).classList.add("hello");
+        // setSelect(e.target.id);
+
+
     }
 
     return (
