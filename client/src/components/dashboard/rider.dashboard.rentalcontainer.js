@@ -44,6 +44,7 @@ function RentalContainer() {
     return (
         <>
             <div id="1" className= "rider-rental-container-block" style={rentalStyles} onClick={handleClick}>
+                
                 <div style={imgContainer}>
                     <img src="https://imgd.aeplcdn.com/0x0/n/cw/ec/26742/swift-exterior-right-front-three-quarter-117655.gif" style={{maxWidth:"100%",maxHeight:"100%",minWidth:"100%",minHeight:"100%"}} />
                 </div>
