@@ -4,10 +4,10 @@ import { FormControl, InputLabel, Select, MenuItem, FormControlLabel, Checkbox, 
 
 
 function RentalBooking() {
-    const [select,setSelect] = useState();
+    const [select,setSelect] = useState("1");
     const [packages, setPackage] = useState("none");
     const [pickup,setPickup] = useState(false);
-    const [bookingButtonSM,setBookingButtomSM] = useState("");
+    const [bookingButtonSM,setBookingButtomSM] = useState("show");
 
     const [promocodeValue,setPromocodeValue] = useState("");
 
@@ -90,34 +90,130 @@ function RentalBooking() {
                         </div>
                         <div className="rental-booking-specifications-top">
                             <div className = "rental-booking-specification-type" style={{minWidth:"30%",maxWidth:"30%",width:"30%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>vehicle reading</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>21,000km</div>
-                            </div>
-                            <div className = "rental-booking-specification-type" style={{minWidth:"30%",maxWidth:"30%",width:"30%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>Transmission type</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>manual</div>
-                            </div>
-                            <div className = "rental-booking-specification-type" style={{minWidth:"20%",maxWidth:"20%",width:"20%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>fuel type</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>petrol</div>
+                                <div style={{minWidth:"30%",width:"30%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/003-medium.png" height="30px" width = "30px" />
+                                </div>
+                                <div style={{minWidth:"70%",width:"70%",display:"flex",flexDirection:"column",justifyContent:"center",paddingLeft:"5px"}}>
+                                    <div style={{fontSize:"9px",textAlign:"left"}}>vehicle reading</div>
+                                    <div style={{fontSize:"15px",textAlign:"left"}}>21,000km</div>
+                                </div>
                             </div>
                             <div className = "rental-booking-specification-type" style={{minWidth:"20%",maxWidth:"20%",width:"20%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>mileage</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>21km</div>
+                                <div style={{minWidth:"30%",width:"30%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/001-safety-seat.png" height="30px" width = "30px" />
+                                </div>
+                                <div style={{minWidth:"70%",width:"70%",display:"flex",flexDirection:"column",justifyContent:"center",paddingLeft:"5px"}}>
+                                    <div style={{fontSize:"9px",textAlign:"left"}}>seater</div>
+                                    <div style={{fontSize:"15px",textAlign:"left"}}>4</div>
+                                </div>
+                            </div>
+                            
+                            <div className = "rental-booking-specification-type" style={{minWidth:"25%",maxWidth:"25%",width:"25%"}}>
+                                <div style={{minWidth:"30%",width:"30%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/002-petrol.png" height="30px" width = "25px" />
+                                </div>
+                                <div style={{minWidth:"70%",width:"70%",display:"flex",flexDirection:"column",justifyContent:"center",paddingLeft:"5px"}}>
+                                    <div style={{fontSize:"9px",textAlign:"left"}}>fuel type</div>
+                                    <div style={{fontSize:"15px",textAlign:"left"}}>petrol</div>
+                                </div>
+                            </div>
+                            <div className = "rental-booking-specification-type" style={{minWidth:"25%",maxWidth:"25%",width:"25%"}}>
+                                <div style={{minWidth:"30%",width:"30%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/002-petrol.png" height="30px" width = "25px" />
+                                </div>
+                                <div style={{minWidth:"70%",width:"70%",display:"flex",flexDirection:"column",justifyContent:"center",paddingLeft:"5px"}}>
+                                    <div style={{fontSize:"9px",textAlign:"left"}}>mileage</div>
+                                    <div style={{fontSize:"15px",textAlign:"left"}}>21km</div>
+                                </div>
                             </div>
                         </div>
                         <div className="rental-booking-specifications-bottom">
-                            <div className = "rental-booking-specification-type" style={{minWidth:"40%",maxWidth:"40%",width:"40%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>variant/color</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>as per availability</div>
+                            <div className = "rental-booking-specification-type" style={{minWidth:"50%",maxWidth:"50%",width:"50%"}}>
+                                <div style={{maxWidth:"30px",width:"25%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/002-insurance.png" height="30px" width = "30px" />
+                                </div>
+                                <div style={{minWidth:"75%",width:"75%",display:"flex",flexDirection:"column",justifyContent:"center",paddingLeft:"5px"}}>
+                                    <div style={{fontSize:"9px",textAlign:"left"}}>variant/color</div>
+                                    <div style={{fontSize:"15px",textAlign:"left"}}>as per availability</div>
+                                </div>
                             </div>
-                            <div className = "rental-booking-specification-type" style={{minWidth:"20%",maxWidth:"20%",width:"20%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>seater</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>4</div>
+                            <div className = "rental-booking-specification-type" style={{minWidth:"35%",maxWidth:"35%",width:"30%"}}>
+                                <div style={{minWidth:"30%",width:"30%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/001-gearshift.png" height="20px" width = "30px" />
+                                </div>
+                                <div style={{minWidth:"70%",width:"70%",display:"flex",flexDirection:"column",justifyContent:"center",paddingLeft:"5px"}}>
+                                    <div style={{fontSize:"9px",textAlign:"left"}}>Transmission type</div>
+                                    <div style={{fontSize:"15px",textAlign:"left"}}>manual</div>
+                                </div>
                             </div>
-                            <div className = "rental-booking-specification-type" style={{minWidth:"20%",maxWidth:"20%",width:"20%"}}>
-                                <div style={{fontSize:"9px",textAlign:"left"}}>fuel type</div>
-                                <div style={{fontSize:"15px",textAlign:"left"}}>petrol</div>
+                            
+                        </div>
+                        <div className = "rental-booking-specifications-block">
+                            <div className = "rental-booking-specifications-block-part" style={{minWidth:"100px",maxWidth:"100px",height:"100%"}}>
+                                <div style={{height:"50%",minHeight:"50%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/003-medium.png" height="40px" width = "40px" />
+                                </div>
+                                <div style={{height:"15%",minHeight:"15%",paddingLeft:10}}>
+                                    <div style={{fontSize:"9px",textAlign:"left",fontWeight:400}}>vehicle reading</div>
+                                </div>
+                                <div style={{height:"35%",minHeight:"35%"}}>
+                                    <div style={{fontSize:"15px",textAlign:"left",paddingLeft:10,fontWeight:600}}>21,000km</div>
+                                </div>
+                            </div>
+                            <div className = "rental-booking-specifications-block-part" style={{minWidth:"100px",maxWidth:"100px",height:"100%"}}>
+                                <div style={{height:"50%",minHeight:"50%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/001-gearshift.png" height="35px" width = "40px" />
+                                </div>
+                                <div style={{height:"15%",minHeight:"15%",paddingLeft:10}}>
+                                    <div style={{fontSize:"9px",textAlign:"left",fontWeight:400}}>Transmission type</div>
+                                </div>
+                                <div style={{height:"35%",minHeight:"35%"}}>
+                                    <div style={{fontSize:"15px",textAlign:"left",paddingLeft:10,fontWeight:600}}>manual</div>
+                                </div>
+                            </div>
+                            <div className = "rental-booking-specifications-block-part" style={{minWidth:"60px",maxWidth:"60px",height:"100%"}}>
+                                <div style={{height:"50%",minHeight:"50%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/001-safety-seat.png" height="35px" width = "35px" />
+                                </div>
+                                <div style={{height:"15%",minHeight:"15%",paddingLeft:10}}>
+                                    <div style={{fontSize:"9px",textAlign:"left",fontWeight:400}}>seater</div>
+                                </div>
+                                <div style={{height:"35%",minHeight:"35%"}}>
+                                    <div style={{fontSize:"15px",textAlign:"left",paddingLeft:10,fontWeight:600}}>4</div>
+                                </div>
+                            </div>
+                            <div className = "rental-booking-specifications-block-part" style={{minWidth:"70px",maxWidth:"70px",height:"100%"}}>
+                                <div style={{height:"50%",minHeight:"50%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/002-petrol.png" height="40px" width = "30px" />
+                                </div>
+                                <div style={{height:"15%",minHeight:"15%",paddingLeft:10}}>
+                                    <div style={{fontSize:"9px",textAlign:"left",fontWeight:400}}>Fuel Type</div>
+                                </div>
+                                <div style={{height:"35%",minHeight:"35%"}}>
+                                    <div style={{fontSize:"15px",textAlign:"left",paddingLeft:10,fontWeight:600}}>petrol</div>
+                                </div>
+                            </div>
+                            <div className = "rental-booking-specifications-block-part" style={{minWidth:"75px",maxWidth:"75px",height:"100%"}}>
+                                <div style={{height:"50%",minHeight:"50%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/002-petrol.png" height="40px" width = "40px" />
+                                </div>
+                                <div style={{height:"15%",minHeight:"15%",paddingLeft:10}}>
+                                    <div style={{fontSize:"9px",textAlign:"left",fontWeight:400}}>mileage</div>
+                                </div>
+                                <div style={{height:"35%",minHeight:"35%"}}>
+                                    <div style={{fontSize:"15px",textAlign:"left",paddingLeft:10,fontWeight:600}}>21 km/l</div>
+                                </div>
+                            </div>
+                            <div className = "rental-booking-specifications-block-part" style={{minWidth:"150px",maxWidth:"150px",height:"100%"}}>
+                                <div style={{height:"50%",minHeight:"50%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                    <img src="/002-insurance.png" height="40px" width = "40px" />
+                                </div>
+                                <div style={{height:"15%",minHeight:"15%",paddingLeft:10}}>
+                                    <div style={{fontSize:"9px",textAlign:"left",fontWeight:400}}>variant/color</div>
+                                </div>
+                                <div style={{height:"35%",minHeight:"35%"}}>
+                                    <div style={{fontSize:"15px",textAlign:"left",paddingLeft:10,fontWeight:600}}>as per availability</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -126,7 +222,7 @@ function RentalBooking() {
                             <div className = "rental-package-tenure-name">tenure</div>
                             <div className = "rental-package-tenure-row">
                                 <div className = "rental-package-tenure-row-block">
-                                    <div className = "rental-package-tenure-row-inner-block" id="1" onClick={handleClickSM}>
+                                    <div className = "rental-package-tenure-row-inner-block tenureselect" id="1" onClick={handleClickSM}>
                                         <div style={{fontSize:"18px",fontWeight:"700",pointerEvents:"none"}}>6</div>
                                         <div style={{fontSize:"10px",fontWeight:"500",pointerEvents:"none"}}>hrs</div>
                                     </div>
@@ -153,7 +249,7 @@ function RentalBooking() {
                             </div>
                         </div>
                         <div className ="rental-booking-package-list">
-                            <div style={{minWidth:"50%",maxWidth:"50%",display:"flex",justifyContent:"center",alignItems:"center",fontSize:"18px",fontWeight:"600px"}}>select package</div>
+                            <div style={{minWidth:"180px",maxWidth:"50%",display:"flex",paddingLeft:"20px",alignItems:"center",fontSize:"20px",fontWeight:"600px"}}>select package</div>
                             <div className = "rental-booking-package-selectform">
                                 <FormControl style={{minWidth:"140px",maxWidth:"140px"}}>
                                     <Select
@@ -174,14 +270,18 @@ function RentalBooking() {
                         </div>
                         <div className = "rental-booking-pricing-block">
                             <div className = "rental-booking-price-tag">
-                                <span className="rental-booking-price-tag-block" style={{minWidth:"20px",fontSize:"26px",fontWeight:"400",justifyContent:"center",alignItems:"center"}}>₹ </span>
-                                <span className="rental-booking-price-tag-block" style={{fontSize:"28px",fontWeight:"600",justifyContent:"center",alignItems:"center"}}>1,000 </span>
-                                <span className="rental-booking-price-tag-block" style={{fontSize:"12px",fontWeight:"400",alignItems:"flex-end",padding:"7px 3px"}}>/12hr </span>
+                                <div style={{minWidth:"50%",maxWidth:"50%",maxHeight:"100%",height:"100%",display:"flex",flexDirection:"row"}}>
+                                    <span className="rental-booking-price-tag-block" style={{minWidth:"20px",fontSize:"26px",fontWeight:"400",justifyContent:"center",alignItems:"center"}}>₹ </span>
+                                    <span className="rental-booking-price-tag-block" style={{fontSize:"28px",fontWeight:"600",
+                                    justifyContent:"center",alignItems:"center"}}>1,000 </span>
+                                    <span className="rental-booking-price-tag-block" style={{fontSize:"12px",fontWeight:"400",alignItems:"flex-end",padding:"7px 3px"}}>/12hr </span>
+                                </div>
+                            
+                                <div style={{minHeight:"16px",maxHeight:"16px",fontSize:"12px",textAlign:"left",paddingLeft:"5px",fontWeight:"400"}}>
+                                    (Inclusive of taxes)
+                                </div>
                             </div>
-                            <div style={{minHeight:"16px",maxHeight:"16px",fontSize:"12px",textAlign:"left",paddingLeft:"5px",fontWeight:"400"}}>
-                                (Inclusive of taxes)
-                            </div>
-                            <div style={{minHeight:"24px",maxHeight:"24px",fontSize:"15px",textAlign:"left",paddingLeft:"5px",fontWeight:"600"}}>+ 2rs per km</div>
+                            <div style={{minHeight:"24px",maxHeight:"24px",fontSize:"15px",textAlign:"left",paddingLeft:"5px",fontWeight:"500",color:"green"}}>+ 2rs per km</div>
                             <div></div>
                         </div>
                     </div>
@@ -192,12 +292,105 @@ function RentalBooking() {
                             label="self-pickup"
                         />
                         </div>
-                        <div style={{minWidth:"50%",maxWidth:"50%",display:"flex",flexDirection:"column",justifyContent:"center",}}>
+                        <div style={{minWidth:"50%",maxWidth:"50%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
                             <div style={{fontSize:"12px",fontWeight:"400"}}>place of delivery</div>
                             <div style={{fontSize:"13px",fontWeight:"500"}}>at your doorstep</div>
                         </div>
                     </div>
-                    <div className = "rental-booking-vehicle-related"></div>
+                    <div className = {`rental-booking-fareblock-small ${bookingButtonSM}`}>
+                        <div style={{minHeight:"40px",display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
+                                <form autoComplete="off" style={{maxHeight:"30px",paddingLeft:"10px",display:"flex",flexDirection:"row",}} onSubmit={promoCodeSubmit}>
+
+                                    <TextField style={{maxHeight:"100%",backgroundColor:"white",}} id="standard-basic" placeholder="apply promocode" value={promocodeValue} onChange = {e => setPromocodeValue(e.target.value)}  />
+                                    <div style={{paddingLeft:"20px"}}>
+                                        <button  >apply</button>
+                                    </div>
+
+                                </form>
+                        </div>
+                        <div className = "rental-booking-large-farecalculator">
+                                <div className = "rental-booking-fare-breakup-block">
+                                    <div className = "rental-booking-fare-breakup-block-left">Base Fare</div>
+                                    <div className = "rental-booking-fare-breakup-block-right">Rs. 1200/-</div>
+                                </div>
+                                <div className = "rental-booking-fare-breakup-block">
+                                    <div className = "rental-booking-fare-breakup-block-left">Extra charges</div>
+                                    <div className = "rental-booking-fare-breakup-block-right">Rs. 120</div>
+                                </div>
+                                <div className = "rental-booking-fare-breakup-block" >
+                                    
+                                </div>
+                                <div className = "rental-booking-fare-breakup-block">
+                                    <div className = "rental-booking-fare-breakup-block-left">Total Fare</div>
+                                    <div className = "rental-booking-fare-breakup-block-right">Rs.1400/-</div>
+                                </div>
+
+                        </div>
+                    </div>
+                    <div className = "rental-booking-vehicle-related">
+                        <div style={{minHeight:50,maxHeight:50,display:"flex",alignItems:"center",fontSize:24,fontWeight:700,paddingLeft:15}}>
+                            insurance and maintainence
+                        </div>
+                        <div className="rental-booking-insurance">
+                            <div style={{minHeight:40,maxHeight:40,display:"flex",alignItems:"center",fontSize:20,fontWeight:500,paddingLeft:15}}>
+                                comphrehensive insurance policy
+                            </div>
+                            <div className="rental-booking-insurance-block">
+                                <div style={{minWidth:"150px",maxWidth:"150px",display:"flex",flexDirection:"column",paddingLeft:15}}>
+                                    <div style={{minHeight:"40%",maxHeight:"40%",height:"40%",display:"flex",alignItems:"center"}}>
+                                        <img src="/001-car-insurance.png" height="40px" width="40px" />
+                                    </div>
+                                    <div style={{minHeight:"60%",maxHeight:"60%",height:"60%",display:"flex",alignItems:"center",fontSize:18,fontWeight:400}}>
+                                        Limited Liability upto 10,000
+                                    </div>
+                                    
+                                </div>
+                                <div style={{minWidth:"150px",maxWidth:"150px",display:"flex",flexDirection:"column",paddingLeft:15}}>
+                                    <div style={{minHeight:"40%",maxHeight:"40%",height:"40%",display:"flex",alignItems:"center"}}>
+                                        <img src="/002-car.png" height="40px" width="40px" />
+                                    </div>
+                                    <div style={{minHeight:"60%",maxHeight:"60%",height:"60%",display:"flex",alignItems:"center",fontSize:18,fontWeight:400}}>
+                                        24X7 roadside assistance
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div className="rental-booking-insurance">
+                            <div style={{minHeight:40,maxHeight:40,display:"flex",alignItems:"center",fontSize:20,fontWeight:500,paddingLeft:15}}>
+                                Routine service and maintainence
+                            </div>
+                            <div className="rental-booking-insurance-block">
+                                <div style={{minWidth:"120px",maxWidth:"120px",display:"flex",flexDirection:"column",paddingLeft:15}}>
+                                    <div style={{minHeight:"40%",maxHeight:"40%",height:"40%",display:"flex",alignItems:"center"}}>
+                                        <img src="/005-car-service.png" height="40px" width="40px" />
+                                    </div>
+                                    <div style={{minHeight:"60%",maxHeight:"60%",height:"60%",display:"flex",alignItems:"center",fontSize:16,fontWeight:400}}>
+                                        oil topup or replacement
+                                    </div>
+                                    
+                                </div>
+                                <div style={{minWidth:"120px",maxWidth:"120px",display:"flex",flexDirection:"column",paddingLeft:15}}>
+                                    <div style={{minHeight:"40%",maxHeight:"40%",height:"40%",display:"flex",alignItems:"center"}}>
+                                        <img src="/car-battery.png" height="40px" width="40px" />
+                                    </div>
+                                    <div style={{minHeight:"60%",maxHeight:"60%",height:"60%",display:"flex",alignItems:"center",fontSize:16,fontWeight:400}}>
+                                        Bateery replacement
+                                    </div>
+                                    
+                                </div>
+                                <div style={{minWidth:"120px",maxWidth:"120px",display:"flex",flexDirection:"column",paddingLeft:15}}>
+                                    <div style={{minHeight:"40%",maxHeight:"40%",height:"40%",display:"flex",alignItems:"center"}}>
+                                        <img src="/003-car-parts-1.png" height="40px" width="40px" />
+                                    </div>
+                                    <div style={{minHeight:"60%",maxHeight:"60%",height:"60%",display:"flex",alignItems:"center",fontSize:16,fontWeight:400}}>
+                                        suspension parts
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className = {`rental-booking-confirm-button-small ${bookingButtonSM}` }>
                         <div className="rental-booking-confirm-button-small-block">confirm booking</div>
                     </div>
@@ -237,7 +430,7 @@ function RentalBooking() {
                             
                         </div>
                         <div className ="rental-booking-package-list">
-                            <div style={{minWidth:"50%",maxWidth:"50%",display:"flex",justifyContent:"center",alignItems:"center",fontSize:"18px",fontWeight:"600px"}}>select package</div>
+                            <div style={{minWidth:"50%",maxWidth:"50%",display:"flex",paddingLeft:"20px",alignItems:"center",fontSize:"18px",fontWeight:"600px"}}>select package</div>
                             <div className = "rental-booking-package-selectform">
                                 <FormControl style={{minWidth:"140px",maxWidth:"140px"}}>
                                     <Select
@@ -300,13 +493,15 @@ function RentalBooking() {
                             </div>
 
                         </div>
-                        <div className = {`rental-booking-confirm-button-small show` }>
+                        <div className = {`rental-booking-confirm-button-large show` }>
                             <div className="rental-booking-confirm-button-small-block">confirm booking</div>
                         </div>
                     </div>
                 </div>
 
+                <div style={{minHeight:500,backgroundColor:"white",minWidth:"100%"}} ></div>
             </div>
+            
         </>
     )
 }
