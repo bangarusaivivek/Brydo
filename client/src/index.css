@@ -35,6 +35,7 @@ code {
 /* .navbar-collapse{
   background-color: white;
 } */
+
 .tagline{
   font-size: 10px;
   margin: 0;
@@ -47,7 +48,10 @@ code {
   padding: 0;
   color: white;
 }
-
+.nav-item:hover{
+  background-color: blue;
+  border-radius: 26px;
+}
 .login-options{
   min-width: 100px;
   height: 40px;
@@ -650,10 +654,11 @@ a:hover
   min-height: calc(100vh - 64px);
   max-height: calc(100vh - 64px);
   height: calc(100vh - 64px);
-  background-color: cornsilk;
+  /* background-color: cornsilk; */
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   overflow-y: scroll;
 }
 .rider-rental-booking-data-container{
@@ -662,7 +667,7 @@ a:hover
   width: 400px;
   min-height: 100%;
   /* padding: 0 10px; */
-  background-color:aliceblue;
+  /* background-color:aliceblue; */
   display: flex;
   flex-direction: column;
 }
@@ -691,7 +696,7 @@ a:hover
   min-height: 140px;
   max-height: 140px;
   height: 140px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   
@@ -703,11 +708,11 @@ a:hover
   min-height: 40px;
   max-height: 40px;
   height: 40px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -718,7 +723,7 @@ a:hover
   min-height: 50px;
   max-height: 50px;
   height: 50px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
 }
@@ -729,13 +734,13 @@ a:hover
   min-height: 50px;
   max-height: 50px;
   height: 50px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
 }
 .rental-booking-specification-type{
   display: flex;
-  flex-direction: column;
+  flex-direction: colrowumn;
   justify-content: center;
   padding-left: 5px;
   
@@ -763,10 +768,12 @@ a:hover
   border: 1px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: antiquewhite;
   position: sticky;
   top: 0;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-left: 10px;
 }
 .rental-booking-package-large-block{
@@ -779,9 +786,11 @@ a:hover
   min-width: 100%;
   max-width: 100%;
   width: 100%;
-  min-height: 100px;
-  background-color: aqua;
-  border-top: 1px dashed black;
+  min-height: 120px;
+  padding-top: 5px;
+  margin-top: 10px;
+  background-color:#D0D3D4;
+  border-top: 3px dashed black;
 }
 .rental-booking-fare-breakup-block{
   min-width: 100%;
@@ -826,7 +835,7 @@ a:hover
   min-height: 100px;
   max-height: 100px;
   height: 100px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
 }
@@ -837,7 +846,7 @@ a:hover
   max-height: 30%;
   font-size: 20px;
   font-weight: 500;
-  padding-left: 10px;
+  padding-left: 20px;
   display: flex;
   align-items: center;
 }
@@ -888,13 +897,14 @@ a:hover
   height: 50px;
   min-height: 50px;
   max-height: 50px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: aliceblue;
   display: flex;
   flex-direction: row;
 
 }
 .rental-booking-package-selectform{
-  min-width: 60%;
+  min-width: 120px;
   max-width: 60%;
   display: flex !important;
   flex-direction: row !important;
@@ -908,6 +918,10 @@ a:hover
   height: 80px;
   min-height: 80px;
   max-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
   /* border: 1px solid black; */
 }
 .rental-booking-price-tag{
@@ -935,7 +949,14 @@ a:hover
   border: 1px solid black;
   display: flex;
   flex-direction: row;
+  /* justify-content: space-around; */
 
+}
+.rental-booking-fareblock-small.show{
+  display: block;
+}
+.rental-booking-fareblock-small{
+  display: none;
 }
 .rental-booking-vehicle-related{
   min-width: 100%;
@@ -964,6 +985,19 @@ a:hover
   bottom: 0;
 }
 
+.rental-booking-confirm-button-large{
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  padding: 5px;
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+}
 .rental-booking-confirm-button-small-block{
  
   min-height: 100%;
@@ -978,6 +1012,37 @@ a:hover
   font-size: 1.3rem;
   font-weight: 500;
 }
+.rental-booking-specifications-block{
+  min-height: 100px;
+  max-height: 200px;
+  height: 200px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: aquamarine; */
+}
+.rental-booking-specifications-block-part{
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  /* border: 1px solid black; */
+  display: none;
+  flex-direction: column;
+
+}
+.rental-booking-insurance{
+  min-height: 150px;
+  min-width: 100%;
+  height: 150px;
+  border: 1px solid black;
+}
+.rental-booking-insurance-block{
+  min-width: 100%;
+  min-height: 110px;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+}
 /* colors */
 .red{
   background-color: red;
@@ -991,6 +1056,9 @@ a:hover
 }
 /* Media Queries */
 @media (min-width: 767px){
+  .navbar-toggler-icon{
+    display: none;
+  }
   .dropdown-modal-container {
       flex-direction:row;
   }
@@ -1020,7 +1088,15 @@ a:hover
   .rider-rental-booking-data-container{
     padding-left: 10px;
   }
-  
+  .rider-rental-booking-back-button{
+    display: none;
+  }
+  .rental-booking-fareblock-small,.rental-booking-fareblock-small.show{
+    display: none;
+  }
+  .rental-booking-confirm-button-small.show,.rental-booking-confirm-button-small{
+    display: none;
+  }
 }
 @media (max-width: 767px){
   .rider-login-form-container{
@@ -1118,11 +1194,27 @@ a:hover
 @media (min-width: 1200px){
   .rider-rental-booking-data-container{
     min-width: 45%;
-    /* max-width: 600px; */
+    /* max-width: 500px; */
     width: 45%;
   }
   .rental-booking-package-large{
     min-width: 35%;
     width: 35%;
   }
+  /* .rental-booking-specifications{
+    max-height: 240px;
+    height: 240px;
+    min-height: 240px;
+  } */
+  .rental-booking-specifications-top,.rental-booking-specifications-bottom{
+    display: none;
+  }
+  .rental-booking-specifications-block{
+    display: flex;
+  }
+  .rental-booking-specifications-block-part{
+    display: flex;
+
+  }
+  
 }
