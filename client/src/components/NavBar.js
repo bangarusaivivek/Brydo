@@ -13,15 +13,15 @@ function NavBar() {
                 <p className = 'tagline'>A bangarus product</p>
             </a>
             <div className="collapse navbar-collapse" id="navbarText">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="/ride">Ride <span className="sr-only">(current)</span></a>
+                <ul className="navbar-nav mr-auto" style={{maxHeight:"40px",height:"40px",display:"flex",flexDirection:"row",alignItems:"center"}}>
+                    <li className="nav-item active" style={{minWidth:"60px",maxHeight:"40px",display:"flex",flexDirection:"row",justifyContent:"center"}}>
+                        <a className="nav-link" style={{padding:"0px"}} href="/ride">Ride <span className="sr-only">(current)</span></a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/drive">Drive</a>
+                    <li className="nav-item" style={{minWidth:"70px",maxHeight:"40px",display:"flex",flexDirection:"row",justifyContent:"center"}}>
+                        <a className="nav-link" style={{padding:"0px"}} href="/drive">Drive</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/partner">Partner</a>
+                    <li className="nav-item" style={{minWidth:"80px",maxHeight:"40px",display:"flex",flexDirection:"row",justifyContent:"center"}}>
+                        <a className="nav-link" style={{padding:"0px"}} href="/partner">Partner</a>
                     </li>
                 </ul>
                 
