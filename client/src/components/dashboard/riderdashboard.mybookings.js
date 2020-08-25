@@ -78,7 +78,7 @@ function RiderDashboardBookings() {
                         </div>
                     </div>
                     <div className = "rider-bookings-data-container-block">
-                        <div className = "rider-bookings-data-list">
+                        <div id="ride" className = "rider-bookings-data-list">
                             <div className = "rider-profile-date-block">
                                 19 Aug 2020, 11:00pm
                             </div>
@@ -99,8 +99,36 @@ function RiderDashboardBookings() {
                                 <div className = "rider-booking-data-list-right"></div>
                             </div>
                         </div>
-                        <div className = "rider-bookings-data-list">
-                            
+                        <div id="rental" className = "rider-bookings-data-list">
+                            <div className = "rider-profile-date-block">
+                                19 Aug 2020, 11:00pm
+                            </div>
+                            <div className = "rider-bookings-data-block">
+                                <div  className = "rider-booking-data-list-left">
+                                    <div style={{minHeight:"80%",minWidth:"80%",maxHeight:"80%",maxWidth:"80%"}}>
+                                        <img src="https://cdn.videoplasty.com/vector/car-icon-vector-4877-1280x720.jpg?1574053690" style={{minHeight:"100%",maxHeight:"100%",minWidth:"100%",maxWidth:"100%"}}  />
+                                    </div>
+                                </div>
+                                <div style={{display:"flex",flexDirection:"row",alignItems:"center",minWidth:"60%",width:"60%",height:"100%"}}>
+                                    <div style={{minWidth:"70%",width:"70%",minHeight:"100%",height:"100%",fontSize:20,fontWeight:500,display:"flex",flexDirection:"column"}}>
+                                        <div style={{minHeight:"50%",minWidth:"100%",display:"flex",alignItems:"center",fontSize:15,fontWeight:500}}>
+                                            Maruti suzuki swift
+                                        </div>
+                                        <div style={{minHeight:"50%",minWidth:"100%",display:"flex",alignItems:"center",fontSize:15,fontWeight:500}}>
+                                            1 month package
+                                        </div>
+                                    </div>
+                                    <div style={{minWidth:"30%",width:"30%",height:"100%",minHeight:"100%",display:"flex",flexDirection:"column",}}>
+                                        <div style={{minHeight:"30%",minWidth:"100%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:400}}>
+                                            km count
+                                        </div>
+                                        <div style={{minHeight:"70%",minWidth:"100%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20,fontWeight:700}}>
+                                            500
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className = "rider-booking-data-list-right"></div>
+                            </div>
                         </div>
                         <div className = "rider-bookings-data-list"></div>
                         <div className = "rider-bookings-data-list"></div>

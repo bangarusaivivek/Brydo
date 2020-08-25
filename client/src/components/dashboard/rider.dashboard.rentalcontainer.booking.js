@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import RiderNavbar from './rider.navbar';
 import { FormControl, InputLabel, Select, MenuItem, FormControlLabel, Checkbox, TextField  } from '@material-ui/core';
-
+import paymentHandler from '../payments/payment';
 
 function RentalBooking() {
     const [select,setSelect] = useState("1");
@@ -392,7 +392,7 @@ function RentalBooking() {
                         </div>
                     </div>
                     <div className = {`rental-booking-confirm-button-small ${bookingButtonSM}` }>
-                        <div className="rental-booking-confirm-button-small-block">confirm booking</div>
+                        <div className="rental-booking-confirm-button-small-block" onClick={paymentHandler}>confirm booking</div>
                     </div>
                 </div>
 
