@@ -12,7 +12,7 @@ const paymentHandler = async (e) => {
     const options = {
       key: 'rzp_test_ZYo1CSsfd37P7i',
       name: "Brydo",
-      image: "/logo192.png",
+      image: "/logo192.png", //"/innova.png"
       description: "Some Description",
       order_id: data.id,
       handler: async (response) => {
@@ -22,6 +22,7 @@ const paymentHandler = async (e) => {
         //  const captureResponse = await Axios.post(url, {})
          console.log(paymentId);
          console.log(options.order_id)
+         
         } catch (err) {
           console.log(err);
         }

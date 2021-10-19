@@ -13,10 +13,12 @@ function DriverLogin({history}) {
     // }
 
     return (
-        <div className="rider-login-page"  >
+        <>
+        <div className = "sticky-top"  style={{minHeight:64,backgroundColor:"orange"}}></div>
+        <div className="rider-login-page ml-lg-5 ml-md-4 ml-sm-3 mr-lg-5 mr-md-4 mr-sm-3"  >
             <div className="rider-login-form-container">
                 <div className="rider-login-form-header">
-                    <Link to="/"> Homepage</Link>
+                    <Link to="/">Homepage</Link>
                     <Link to="/riderlogin">Login as Rider</Link>
                 </div>
                 <div className= "rider-login-form-body">
@@ -27,8 +29,11 @@ function DriverLogin({history}) {
                     </div>
                 </div>
             </div>
-            <div className="rider-login-container"></div>
+            <div className="rider-login-container">
+                <img src = "/loginpageimage.jpg" height="100%" width="100%" />
+            </div>
         </div>
+        </>
     )
 }
 

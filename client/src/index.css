@@ -19,6 +19,22 @@ code {
     monospace;
 }
 
+/* Animations */
+@keyframes signupmove{
+  from {left: 0px;}
+  to {left:30px;}
+  
+}
+.signup-animated-block:hover{
+  cursor: pointer;
+  /* background-color: antiquewhite; */
+}
+.signup-move{
+  cursor: pointer;
+  position: absolute;
+  animation: signupmove 2s linear infinite;
+}
+
 .navbar-brand{
   min-width: 125px;
   height: 100%;
@@ -36,6 +52,53 @@ code {
   background-color: white;
 } */
 
+.Bottom-Navbar{
+  display: block;
+  min-height: 500px;
+  max-height: 500px;
+  width: 100%;
+  background-color: black;
+  
+}
+.Bottom-Navbar-body{
+  min-height: 350px;
+  padding: 0 64px;
+}
+.Bottom-Navbar-body-main{
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+.Bottom-Navbar-body-main-block{
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 300px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 25px;
+}
+.Bottom-Navbar-body-main-block-heading{
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+.Bottom-Navbar-body-main-block-part{
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+.Bottom-Navbar-body-footer{
+  min-height: 50px;
+  background-color: aqua;
+}
 .tagline{
   font-size: 10px;
   margin: 0;
@@ -173,21 +236,37 @@ a:hover
 }
 
 .mainpage-row{
-  min-height: 500px;
+  max-height: 500px;
+  height: 500px;
+  max-width: 100%;
   margin: 10px;
   background-color: aqua;
   color: black;
+  display: flex;
+  flex-direction: row;
+}
+.mainpage-row-rider{
+  width: 100%;
+  height: 100%;
+  background-image: url("/busyroads1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 .rider-login-page{
   display: flex;
-  height: 90vh;
+  height: calc(100vh - 64px);
+  max-height: calc(100vh - 64px);
+  
 }
 .rider-login-form-container{
-  max-width: 40%;
-  min-width: 450px;
-  background-color: azure;
+  
+  min-width: 400px;
+  width: 400px;
+  /* background-color: azure; */
   display: flex;
   flex-direction: column;
+  background-color: #f5f5f5;
   
 }
 .rider-login-form-header{
@@ -209,24 +288,28 @@ a:hover
 }
 .rider-login-form-bodyContainer{
   height: 80%;
-  width: 400px;
-  border: 1px solid black;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   
 }
 .rider-form-logo{
-  height: 40%;
+  height: 150px;
   width: 100%;
-  background-color: beige;
+  background-color:#ddd9d9;
+  box-shadow: -2px 0px 1px 1px lightgreen;
 }
 .rider-form-data{
   height: 40%;
+  max-height: 175px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 .rider-login-form{
   height: 50%;
@@ -236,8 +319,9 @@ a:hover
   flex-direction: column;
 }
 .rider-login-container{
-  max-width: 60%;
-
+  /* max-width: 60%; */
+  min-width: 60%;
+  /* width: 60%; */
   background-color: gray;
 }
 .rider-login-number{
@@ -252,12 +336,15 @@ a:hover
   background-color: rgb(228, 237, 245);
 }
 .signin-auth-container{
-  height: 90vh;
-  width: 100%;
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  background-image: url('/riderloginauthpage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .signin-auth-form-container{
   height: 70%;
@@ -265,12 +352,20 @@ a:hover
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  box-shadow: 1px 5px 10px 5px lightcoral;
+  background-color: white;
+
 }
 .signin-auth-header{
   width: 350px;
+  height: 50px;
+  margin: 10px 0px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  box-shadow:  1px 2px 5px 5px lightcyan;
 }
 .signin-auth-form-block{
   height: 40%;
@@ -291,17 +386,26 @@ a:hover
   
 }
 .rider-signup-container{
-  min-height: 1200px;
-  height: calc(100vh - 60px);
+  min-height: 1500px;
+  /* max-height: calc(100vh - 64px); */
+  height: calc(100vh - 64px);
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  /* background-color: azure; */
+  background-image: url('/driverriding.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
 }
 .signup-data-container{
-  height: 1000px;
+  /* height: 1000px; */
   min-width: 450px;
   position: absolute;
- background-color: aqua;
- right: 10px;
+ background-color: #f5f5f5;
+ right: 25px;
  top: 20px;
+ box-shadow: 2px 5px 10px 10px rgba(0,0,0,.1);
 }
 .signup-header{
   min-height: 250px;
@@ -312,7 +416,8 @@ a:hover
   padding: 0 10px ;
   display: flex;
   flex-direction: column;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
+  
 }
 .signup-form-block{
   min-height: 100px;
@@ -350,13 +455,39 @@ a:hover
   color:red;
 }
 .signup-form-button{
-  min-height: 50px;
-  height: 50px;
+  min-height: 75px;
+  height: 75px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
+.message-container{
+  min-height: 400px;
+  max-height: 400px;
+  width: 350px;
+  min-width: 350px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.signup-toggle{
+  display: none;
+  min-height: 100px;
+  max-height: 100px;
+  height: 100px;
+
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.signup-toggle.show{
+  display: flex;
+}
 /* Rider Dashboard */
 .rider-bottom-navbar{
   height: 56px;
@@ -1099,6 +1230,9 @@ a:hover
   }
 }
 @media (max-width: 767px){
+  .Bottom-Navbar{
+    display: none;
+  }
   .rider-login-form-container{
     min-width: 100%;
   }
@@ -1106,13 +1240,14 @@ a:hover
     width: 400px;
   }
   .rider-login-container{
-    display: hidden;
+    display: none;
   }
   .rider-signup-container{
     
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    padding-top: 20px;
   }
   .signup-data-container{
     position: static;
@@ -1176,10 +1311,16 @@ a:hover
     min-width: 300px;
     max-width: 300px;
   }
+  
+}
+@media (max-width: 350px){
+  .signin-auth-header,.signin-auth-form-container{
+    width: 100%;
+  }
 }
 @media (max-width: 450px){
   .rider-login-form-bodyContainer{
-    width: 350px;
+    width: 100%;
   }
 }
 

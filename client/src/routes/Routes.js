@@ -18,6 +18,8 @@ import RiderDashboardProfile from '../components/dashboard/riderdashboard.profil
 import RiderDashboardSupport from '../components/dashboard/riderdashboard.support';
 import RiderDashboardRental from '../components/dashboard/rider.dashboard.rental';
 import RentalBooking from '../components/dashboard/rider.dashboard.rentalcontainer.booking';
+import UserStateProvider from '../contexts/UserState';
+import RiderActivate from '../components/rider/activate';
 
 function Routes() {
     return (
@@ -26,9 +28,9 @@ function Routes() {
             <Route path="/ride" exact component={Ride} />
             <Route path = "/riderlogin" exact component={RiderLogin} />
             <Route path = "/ridersignup" exact component={RiderSignup} />
-            <Route path = "/driversignup" exact component={DriverSignup} />
+            <Route path = "/driversignup" exact component={DriverSignup } />
             <Route path = "/driverlogin" exact component={DriverLogin} />
-            <Route path = "/signinRiderAuth" exact component={SignInRiderAuthPage} />
+            <Route path = "/signinRiderAuth" exact  component={SignInRiderAuthPage} />
             <Route path = "/signinDriverAuth" exact component={SignInDriverAuthPage} />
             <Route path = "/riderdashboard" exact component={RiderDashboard} />
             <Route path = "/riderdashboard/mybookings" exact component={RiderDashboardBookings} />
@@ -37,6 +39,7 @@ function Routes() {
             <Route path = "/riderdashboard/support" exact component={RiderDashboardSupport} />
             <Route path = "/riderdashboard/rentals" exact component={RiderDashboardRental} />
             <Route path = "/riderdashboard/rentals/booking" exact component={RentalBooking} />
+            <Route path = "/auth/rider/activate/:token" exact component={RiderActivate} />
             <Route path = "/hello" exact component={Example} />
             <Route path="*" exact component = {NotFound} />
         </Switch>

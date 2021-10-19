@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import MainPageContainer from './mainpage-container/MainPageContainer';
 import NavBar from './NavBar';
+import BottomNavbar from './BottomNavbar';
 
 function Home() {
     useEffect(()=>{
@@ -11,6 +12,7 @@ function Home() {
         <>
             <NavBar />
             <MainPageContainer />
+            <BottomNavbar />
         </>
     )
 }
